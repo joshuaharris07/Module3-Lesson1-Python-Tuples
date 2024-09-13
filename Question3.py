@@ -15,3 +15,17 @@
 # ]
 
 # - Write a function to iterate over the list of orders. - Unpack each tuple in the list and format the details for display.
+
+def display_orders(orders):
+    for order in orders:
+        name, product, quantity = order
+        print(f"Customer: {name}, Product: {product}, Quantity: {quantity}")
+
+orders = [
+    ("Alice", "Laptop", 1),
+    ("Bob", "Camera", 2),
+    ("Josh", "Monitor", 1),
+    ("Ezra", "Mouse", 3)
+]
+
+display_orders(orders)
