@@ -8,3 +8,25 @@
 
 # library = [("1984", "George Orwell"), ("Brave New World", "Aldous Huxley")]
 # - Add functionality to insert new books into `library`. Ensure that adding a duplicate book is handled appropriately.
+
+def add_book(book, author):
+    book_to_add = (book, author)
+    if book_to_add in library:
+        print(f"{book} by {author} is already in the library.")  
+    else:
+        print(f"Added {book} by {author} to the library.")
+        library.append(book_to_add)
+
+library = [
+    ("1984", "George Orwell"), 
+    ("Brave New World", "Aldous Huxley")
+    ]
+
+book = input("What is the book title? ").title()
+author = input("What is the author's name? ").title()
+
+add_book(book, author)
+
+print("Here are the books in the library:")
+for book in library:
+    print(f"{book[0]} by {book[1]}")
